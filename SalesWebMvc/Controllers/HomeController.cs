@@ -1,6 +1,7 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using SalesWebMvc.Models;
+using System.Diagnostics;
+using static System.Net.WebRequestMethods;
 
 namespace SalesWebMvc.Controllers
 {
@@ -15,6 +16,7 @@ namespace SalesWebMvc.Controllers
 
         public IActionResult Index()
         {
+            ViewData["Message"] = "Your application description page";
             return View();
         }
 
